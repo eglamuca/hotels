@@ -218,3 +218,11 @@ img, svg, video { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* Top banner image */
+.top-banner { position: relative; padding: 16px 0; background: var(--bg); border-bottom: 1px solid color-mix(in oklab, var(--text) 10%, transparent); }
+.banner-card { display: block; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid color-mix(in oklab, var(--text) 14%, transparent); box-shadow: var(--shadow-1); transition: transform .35s var(--ease-smooth), box-shadow .35s var(--ease-smooth), border-color .35s var(--ease-smooth); }
+.banner-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: color-mix(in oklab, var(--primary) 30%, transparent); }
+.banner-card:focus-visible { outline: 2px solid color-mix(in oklab, var(--primary) 60%, transparent); outline-offset: 2px; }
+.top-banner__img { display: block; width: 100%; height: auto; aspect-ratio: 16/6; object-fit: cover; transition: transform .35s var(--ease-smooth); }
+.banner-card:hover .top-banner__img { transform: scale(1.03); }
