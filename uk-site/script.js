@@ -68,3 +68,18 @@ if (statNumbers.length) {
     statNumbers.forEach((el) => io.observe(el));
   }
 }
+
+// Back to top button
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  const onScroll = () => {
+    if (window.scrollY > 320) {
+      backToTop.classList.add('is-visible');
+    } else {
+      backToTop.classList.remove('is-visible');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' }));
+  onScroll();
+}
